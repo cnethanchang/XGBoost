@@ -19,7 +19,7 @@ def main():
 
     X = time.reshape((-1, 1))  # Time. Fraction of the year [0, 1]
     X = np.insert(X, 0, values=1, axis=1)  # Insert bias term
-    print(type(X), X.shape, X)
+    # print(type(X), X.shape, X)
     y = temp[:, 0]  # Temperature. Reduce to one-dim
 
     print('=' * 100)
@@ -30,7 +30,7 @@ def main():
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
 
-    print(y_test[0:5])
+    # print(y_test[0:5])
     # Color map
     cmap = plt.get_cmap('viridis')
 
